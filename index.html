@@ -97,7 +97,9 @@
   label.chk:has(input:checked){border-color:var(--green);background:#e6f8ec;}
   label.chk b{display:block;font-size:1em;}
   label.chk small{display:block;font-size:.78em;color:#6d4c41;font-style:italic;}
-  .speeds{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+  .speeds{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
+  .speeds .mode-btn{padding:8px 2px;font-size:1.25em;}
+  .speeds .mode-btn small{font-size:.5em;}
   #settingsWarn{color:var(--red);font-weight:800;margin-top:10px;min-height:1.3em;}
 
   /* ---------- JEU ---------- */
@@ -226,6 +228,8 @@
       <div class="chk-grid" id="formChecks"></div>
       <div class="section-label">Vitesse</div>
       <div class="speeds">
+        <button class="mode-btn" data-speed="escargot">🐌<small>Escargot</small></button>
+        <button class="mode-btn" data-speed="paresseux">🦥<small>Paresseux</small></button>
         <button class="mode-btn" data-speed="tranquille">🐢<small>Tranquille</small></button>
         <button class="mode-btn" data-speed="normal">🐇<small>Normal</small></button>
         <button class="mode-btn" data-speed="rapide">🐆<small>Rapide</small></button>
@@ -496,7 +500,7 @@ dkn|Il ne pleut plus.
     college: Object.keys(CATS),
   };
 
-  const SPEEDS = { tranquille: 2.4, normal: 1.85, rapide: 1.45 }; // durée de montée (s)
+  const SPEEDS = { escargot: 3.8, paresseux: 3.0, tranquille: 2.4, normal: 1.85, rapide: 1.45 }; // durée de montée (s)
   const CHRONO_TIME = 90;
   const FRUITS = [
     { e:'🍉', rind:'#3fa34d', flesh:'#ffd9dc', juice:'#ff4d5e' },
